@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{site.title}}</title>
+  </head>
+  <body>
+    <!-- Add navbar here -->
+    <nav>
+      <!-- <ul>
+        {%- for item in site.data.navbar -%}
+        <li>
+          <a href="{{item.link}}">{{item.title}} </a>
+        </li>
+        {%- endfor -%}
+      </ul> -->
+
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+
+    {{content}}
+
+    <style>
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-right: 10px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- Add footerhere -->
+  </body>
+</html>
