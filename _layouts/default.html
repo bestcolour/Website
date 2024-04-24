@@ -6,67 +6,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="favicon" type="image/png" href="" />
+    <link rel="stylesheet" href="{{site.baseurl}}/_layouts/default.css">
     <title>{{site.title}}</title>
   </head>
   <body>
-    <!-- Add navbar here -->
-    <nav>
-      <ul>
-        {% for item in site.data.navbar %}
-        <li>
-          <a
-            href="{{item.link}}"
-            class="{% if page.url == item.link %} nav-active {% endif %}"
-          >
-            {{item.title}}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div>
+      <!-- Add navbar here -->
+      <nav>
+        <ul>
+          {% for item in site.data.navbar %}
+          <li >
+            <a
+              href="{{item.link}}"
+              class="{% if page.url == item.link %} nav-active {% endif %}"
+            >
+              {{item.title}}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
 
-    {{content}}
+      <br>
+      <br>
+      {{content}}
 
-    <!-- Add footerhere -->
-    <footer>
-      <ul>
-        <li id="copyright"></li>
-
-        <!-- <li>See my other works!</li>
-      <ul>
-          {%- for item in site.static_files -%}
-            {%- if item.image -%}
-  
-            {%- for footerItem in site.data.footer-medialinks  -%}
-  
-            {%- if footerItem.name == item.name -%}
-            <li>
-              <a href="{{footerItem.media-link}}" target="_blank" title="{{footerItem.title}}">
-                <img src="{{item.path}}" alt="{{item.name}}">
-              </a>
-            </li>
-            {%- endif -%}
-            
-            {%- endfor -%}
-              
-            {%- endif -%}
-          {%- endfor -%}
-      </ul>
- -->
-      </ul>
-    </footer>
+      <!-- Add footerhere -->
+      <footer>
+        <div>
+          <p id="copyright"></p>
+        </div>
+      </footer>
+    </div>
 
     <style>
-      /* Navbar and Footer Styling */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        width: 100%;
+        height: 10vh;
+        background-color: white;
+
+        box-shadow: 3px 3px 20px;
+      }
+      /* Navbar Styling */
       nav ul {
         display: flex;
         flex-direction: row-reverse;
         list-style: none;
+        height: 100%;
+
+        padding-left: 2.5%;
+        padding-right: 2.5%;
       }
 
       nav ul li {
-        margin-right: 1vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.25em;
+
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 1.7vw;
+        padding-right: 1.7vw;
+
+        display: flex;
+        align-items: center;
       }
 
       nav ul li a {
@@ -81,21 +88,26 @@
         text-decoration: underline;
       }
 
-      footer ul {
+
+      /*  Footer Styling */
+      footer {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        list-style: none;
+
+        height: 10vh;
+        background-color: white;
+        text-align: center;
       }
-      /* 
-      footer ul ul{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-      } */
+
+
+      /* Colour */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+      }
     </style>
 
     <script>
