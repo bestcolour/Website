@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{site.baseurl}}/_layouts/default.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/_layouts/default.css" />
     <title>{{site.title}}</title>
   </head>
   <body>
@@ -15,20 +15,15 @@
       <nav>
         <ul>
           {% for item in site.data.navbar %}
-          <li >
-            <a
-              href="{{item.link}}"
-              class="{% if page.url == item.link %} nav-active {% endif %}"
-            >
-              {{item.title}}
-            </a>
+          <li class="{% if page.url == item.link %} nav-active {% endif %}">
+            <a href="{{item.link}}"> {{item.title}} </a>
           </li>
           {% endfor %}
         </ul>
       </nav>
 
-      <br>
-      <br>
+      <br />
+      <br />
       {{content}}
 
       <!-- Add footerhere -->
@@ -41,14 +36,17 @@
 
     <style>
       * {
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
       }
 
       nav {
-        width: 100%;
+        width: 100vw;
         height: 10vh;
         background-color: white;
+
+        position: fixed;
 
         box-shadow: 3px 3px 20px;
       }
@@ -57,6 +55,7 @@
         display: flex;
         flex-direction: row-reverse;
         list-style: none;
+
         height: 100%;
 
         padding-left: 2.5%;
@@ -64,30 +63,30 @@
       }
 
       nav ul li {
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 1.25em;
+        height: 100%;
 
-        padding-top: 0.5vh;
-        padding-bottom: 0.5vh;
-        padding-left: 1.7vw;
-        padding-right: 1.7vw;
-
+      
         display: flex;
         align-items: center;
       }
 
-      nav ul li a {
-        text-decoration: none;
+      nav ul li:hover {
+        cursor: pointer;
+        background-color: rgb(176, 204, 188);
       }
 
-      nav ul li a:hover {
-        text-decoration: underline;
+      nav ul li a {
+        text-decoration: none;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        padding-left: 1.7vw;
+        padding-right: 1.7vw;
       }
 
       .nav-active {
-        text-decoration: underline;
+        background-color: aquamarine;
       }
-
 
       /*  Footer Styling */
       footer {
@@ -100,7 +99,6 @@
         background-color: white;
         text-align: center;
       }
-
 
       /* Colour */
       body {
