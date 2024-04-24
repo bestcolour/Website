@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,25 +11,58 @@
   <body>
     <!-- Add navbar here -->
     <nav>
-      <!-- <ul>
-        {%- for item in site.data.navbar -%}
-        <li>
-          <a href="{{item.link}}">{{item.title}} </a>
-        </li>
-        {%- endfor -%}
-      </ul> -->
-
       <ul>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/">Home</a></li>
+        {% for item in site.data.navbar %}
+        <li>
+          <a
+            href="{{item.link}}"
+            class="{% if page.url == item.link %} nav-active {% endif %}"
+          >
+            {{item.title}}
+          </a>
+        </li>
+        {% endfor %}
       </ul>
     </nav>
 
     {{content}}
 
+    <!-- Add footerhere -->
+    <footer>
+      <ul>
+
+<!--  -->
+
+      <ul>
+          {%- for item in site.static_files -%}
+            {%- if item.image -%}
+  
+            {%- for footerItem in site.data.footer-medialinks  -%}
+  
+            {%- if footerItem.name == item.name -%}
+            <li>
+              <a href="{{footerItem.media-link}}" target="_blank" title="{{footerItem.title}}">
+                <img src="{{item.path}}" alt="{{item.name}}">
+              </a>
+            </li>
+            {%- endif -%}
+            
+            {%- endfor -%}
+              
+            {%- endif -%}
+          {%- endfor -%}
+      </ul>
+
+
+
+      </ul>
+    </footer>
+
     <style>
+      /* Navbar and Footer Styling */
       nav ul {
         display: flex;
+        flex-direction: row-reverse;
         list-style: none;
       }
 
@@ -37,8 +73,33 @@
       nav ul li a {
         text-decoration: none;
       }
-    </style>
 
-    <!-- Add footerhere -->
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .nav-active {
+        text-decoration: underline;
+      }
+
+
+      footer ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+
+      }
+
+      footer ul ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    
+    </style>
   </body>
 </html>
