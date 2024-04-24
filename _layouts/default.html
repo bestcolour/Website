@@ -6,6 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="favicon" type="image/png" href="" />
     <title>{{site.title}}</title>
   </head>
   <body>
@@ -30,9 +31,9 @@
     <!-- Add footerhere -->
     <footer>
       <ul>
+        <li id="copyright"></li>
 
-<!--  -->
-
+        <!-- <li>See my other works!</li>
       <ul>
           {%- for item in site.static_files -%}
             {%- if item.image -%}
@@ -52,9 +53,7 @@
             {%- endif -%}
           {%- endfor -%}
       </ul>
-
-
-
+ -->
       </ul>
     </footer>
 
@@ -67,7 +66,7 @@
       }
 
       nav ul li {
-        margin-right: 10px;
+        margin-right: 1vw;
       }
 
       nav ul li a {
@@ -82,24 +81,29 @@
         text-decoration: underline;
       }
 
-
       footer ul {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
         list-style: none;
-
       }
-
+      /* 
       footer ul ul{
         list-style: none;
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-      }
-    
+      } */
     </style>
+
+    <script>
+      var currentDate = new Date();
+      var year = currentDate.getFullYear();
+      document.getElementById(
+        "copyright"
+      ).textContent = `©${year} by Lee Kee Shen`;
+    </script>
   </body>
 </html>
