@@ -1,0 +1,48 @@
+---
+layout: default
+title: "input your title here"
+title-align: "left"
+
+number-of-latest-posts: "0"
+content-before-table: ""
+---
+
+<style>
+  h1 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .basic-page-wrapper
+  {
+    background-color: azure;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+  }
+</style>
+
+<div class="basic-page-wrapper" style="text-align:{{page.title-align}};">
+    <h1>{{page.title}}</h1>
+
+    {{page.content-before-table}}
+
+    {% assign index = 0 %}
+    {% for post in site.posts %}
+        {%- if index = number-of-latest-posts -%}
+        {% break %}
+        {%- endif -%}
+        {% assign index = index | plus: 1 %}
+
+       
+        
+    <!-- Table html goes here -->
+        {{post.title}}
+
+    {% endfor %}
+    
+
+    <!-- Make sure that the post is not a date that has yet to occur yet else it wont show -->
+
+    {{content}}
+</div>

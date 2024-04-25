@@ -6,36 +6,14 @@ layout: basic-page
 title: "Home"
 title-align: "center"
 ---
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
-all my fellas
+
+Hey there! This is my website to keep track of my journey as a developer!
+<br>
+<br>
+Happy reading!
+<br>
+<br>
+Reach out to me on my <a href="mailto:{{site.email}}">email</a>
+<br>
+<br>
+<br>
