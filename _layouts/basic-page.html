@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "input your title here"
-title-align: "left"
+
+# --- Page specific variables ---
+# title: "input your title here"
+# title_align: "left"
 ---
 
 <style>
@@ -18,7 +20,7 @@ title-align: "left"
     padding-right: 2.5vw;
   }
 </style>
-<div class="basic-page-wrapper" style="text-align:{{page.title-align}};">
+<div class="basic-page-wrapper" style="text-align:{{page.title_align}};">
     <h1>{{page.title}}</h1>
     {{content}}
 </div>
