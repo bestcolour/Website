@@ -28,10 +28,7 @@ table_col: 2
 
 -- After table --
 
-
 Add a general description
-
-Add latest updates/post
 
 Add Categories
 
