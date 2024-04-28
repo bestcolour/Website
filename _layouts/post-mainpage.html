@@ -24,8 +24,6 @@ layout: default
     padding-right: 2.5vw;
   }
 
-  .post-mainpage-before-table-content {
-  }
 
   .post-mainpage-tablerow {
     display: flex;
@@ -39,12 +37,20 @@ layout: default
     justify-content: space-evenly;
   }
 
-  .post-mainpage-tablerow img{
+  .post-mainpage-table-cell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-mainpage-table-cell img{
     width: 10vw;
   }
 
-  .post-mainpage-tablerow p{
+  .post-mainpage-table-cell p {
+    width: 10vw;
     background-color: rgba(0, 0, 0, 0.414);
+    text-align: center;
   }
 
 </style>
@@ -52,7 +58,7 @@ layout: default
 <div class="basic-page-wrapper" style="text-align:{{page.title_align}};">
   <h1>{{page.title}}</h1>
 
-  <div class="post-mainpage-before-table-content">
+  <div >
   {{page.content_before_table}}
   </div>
 

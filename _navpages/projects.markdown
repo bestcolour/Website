@@ -3,20 +3,16 @@ layout: post-mainpage
 # title: "Projects"
 permalink: "/projects/"
 
-
-
-
-
 content_before_table: "
 <div> 
--- before table --
+Latest projects:
 </div>
 "
 
 
 number_of_latest_posts: 4
-table_row: 2
-table_col: 2
+table_row: 3
+table_col: 4
 
 
 ---
