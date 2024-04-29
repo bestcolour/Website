@@ -43,8 +43,6 @@ collections:
 defaults:
   - scope:
       path: "assets/image/"
-    values:
-      image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

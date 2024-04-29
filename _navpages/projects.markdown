@@ -5,7 +5,15 @@ permalink: "/projects/"
 
 content_before_table: "
 <div> 
-Latest projects:
+The place where I document my experiences/thoughts behind my projects.
+<br>
+<br>
+<br>
+
+<h3>Latest projects</h3>
+<hr>
+<br>
+<br>
 </div>
 "
 
@@ -16,15 +24,12 @@ table_col: 4
 
 
 ---
-
-
-
+<br>
 <br>
 
+---
+<br>
+### Polytechnic Games
+![final game made in polytechnic]({{site.baseurl}}/assets/image/HaulAway/Screenshot4.jpg)
 
--- After table --
-
-Add a general description
-
-Add Categories
 
