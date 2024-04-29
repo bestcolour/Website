@@ -44,11 +44,14 @@ layout: default
   }
 
   .post-mainpage-table-cell img{
-    width: 10vw;
+    width: 15vw;
+    height: 15vh;
+    object-fit: cover;
+
   }
 
   .post-mainpage-table-cell p {
-    width: 10vw;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.414);
     text-align: center;
   }
@@ -104,6 +107,7 @@ layout: default
           <img src="{{post.thumbnail}}" alt="{{post.alt-text}}" />
         </a>
         <p>{{post.title}}</p>
+        <br>
       </div>
         
       {%- assign colIndex = colIndex | plus: 1 -%} 

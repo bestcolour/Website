@@ -1,0 +1,19 @@
+- url: "/projects/polytechnic-games/haulaway-projectpost"
+  thumbnail: "https://raw.githubusercontent.com/bestcolour/Website/main/assets/image/HaulAway/Poster.jpg"
+  alt-text: "image of github"
+  title: "Haul Away!"
+  image-offset: 50% 0%
+
+
+- url: "https://www.google.co.uk/"
+  thumbnail: "/assets/image/github-logo copy.png"
+  alt-text: "image of github"
+  title: "Go to github"
+
+  
+- url: "https://www.google.co.uk/"
+  thumbnail: "/assets/image/github-logo copy.png"
+  alt-text: "image of github"
+  title: "Go to github"
+
+

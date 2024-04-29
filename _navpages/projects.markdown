@@ -18,9 +18,9 @@ The place where I document my experiences/thoughts behind my projects.
 "
 
 
-number_of_latest_posts: 4
-table_row: 3
-table_col: 4
+number_of_latest_posts: 6
+table_row: 2
+table_col: 3
 
 
 ---
@@ -30,6 +30,9 @@ table_col: 4
 ---
 <br>
 ### Polytechnic Games
-![final game made in polytechnic]({{site.baseurl}}/assets/image/HaulAway/Screenshot4.jpg)
+
+<a href="{{base.siteurl}}/projects/polytechnic-games/">
+<img src="https://raw.githubusercontent.com/bestcolour/Website/main/assets/image/HaulAway/Screenshot3.jpg" alt-text="Polytechnic Final Year Project" width="100%"/>
+</a>
 
 
