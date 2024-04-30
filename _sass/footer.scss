@@ -1,0 +1,28 @@
+
+
+/*  Footer Styling */
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+    height: 10vh;
+    background-color: white;
+    text-align: center;
+  }
+  
+  /* Body */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+  }
+  
+  #content-wrapper{
+    padding-right: 20vw;
+    padding-left: 20vw;
+    padding-top: 22.5vh;
+    padding-bottom: 7.5vh;
+  }
+  

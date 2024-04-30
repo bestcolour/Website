@@ -1,0 +1,99 @@
+
+/* === Mobile & Tablet === */
+.nav-desktop{
+  display: none;//hide the desktop navbar
+}
+
+
+.nav-mobile button{
+  background-color: red;
+  width: 20vw;
+  height: 20vw;
+
+  border: 0;
+  position: fixed;
+  right:0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-mobile button div{
+  background-color: white;
+  height: 2vw;
+  width: 15vw;
+  border-radius: 25px
+}
+
+.nav-mobile button:active
+{
+  background-color: yellow;
+}
+
+
+.nav-mobile-list{
+  position: fixed;
+  right: -50%;
+}
+
+@keyframes nav-mobile-list {
+  from{right: -50%;}
+  to{right: 50%;}
+}
+
+
+/* === Desktop === */
+@media only screen and (min-width: 600px) {
+  .nav-mobile{
+    display: none;
+  }
+  /* Navbar Styling */
+  .nav-desktop{
+    display: block;// set the display value to the original value
+    height: 10vh;
+    background-color: white;
+
+    position: fixed;
+
+    box-shadow: 3px 3px 20px;
+  }
+
+  .nav-desktop ul {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+
+    height: 100%;
+
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .nav-desktop ul li {
+    font-size: 1.25em;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-desktop ul li:hover {
+    cursor: pointer;
+    background-color: rgb(176, 204, 188);
+  }
+
+  .nav-desktop ul li a {
+    text-decoration: none;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+  }
+
+  .nav-active {
+    background-color: aquamarine;
+  }
+}
+

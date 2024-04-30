@@ -1,15 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{site.title}}</title>
+    <link rel="stylesheet" href={{"assets/css/main.css" | relative_url }}>
   </head>
   <body>
-    <div >
-      <!-- Add navbar here -->
-      <nav>
+    <div>
+      <!-- Mobile version of navbar -->
+      <nav class="nav-mobile">
+        <button id="nav-mobile-menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <ul class="nav-mobile-list">
+          {% for item in site.data.navbar %}
+          <li class="{% if page.url == item.link %} nav-active {% endif %}">
+            <a href="{{item.link}}"> {{item.title}} </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <!-- Dekstop version of navbar -->
+      <nav class="col-12 col-s-12 nav-desktop">
         <ul>
           {% for item in site.data.navbar %}
           <li class="{% if page.url == item.link %} nav-active {% endif %}">
@@ -19,10 +35,8 @@
         </ul>
       </nav>
 
-      <div id="content-wrapper">
-        {{content}}
-      </div>
-        
+      <div id="content-wrapper">{{content}}</div>
+
       <!-- Add footerhere -->
       <footer>
         <div>
@@ -31,93 +45,20 @@
       </footer>
     </div>
 
-    <style>
-      * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        /* padding: 0; */
-      }
-
-      /* Navbar Styling */
-      nav {
-        width: 100vw;
-        height: 10vh;
-        background-color: white;
-
-        position: fixed;
-
-        box-shadow: 3px 3px 20px;
-      }
-      nav ul {
-        display: flex;
-        flex-direction: row-reverse;
-        list-style: none;
-
-        height: 100%;
-
-        padding-left: 2.5%;
-        padding-right: 2.5%;
-      }
-
-      nav ul li {
-        font-size: 1.25em;
-        height: 100%;
-
-        display: flex;
-        align-items: center;
-      }
-
-      nav ul li:hover {
-        cursor: pointer;
-        background-color: rgb(176, 204, 188);
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        padding-top: 4vh;
-        padding-bottom: 4vh;
-        padding-left: 1.7vw;
-        padding-right: 1.7vw;
-      }
-
-      .nav-active {
-        background-color: aquamarine;
-      }
-
-      /*  Footer Styling */
-      footer {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-
-        height: 10vh;
-        background-color: white;
-        text-align: center;
-      }
-
-      /* Body */
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #fafafa;
-      }
-
-      #content-wrapper{
-        padding-right: 20vw;
-        padding-left: 20vw;
-        padding-top: 22.5vh;
-        padding-bottom: 7.5vh;
-      }
-
-    </style>
-
     <script>
       var currentDate = new Date();
       var year = currentDate.getFullYear();
       document.getElementById(
         "copyright"
       ).textContent = `©${year} by ${"{{site.name}}"}`;
+
+      var button = document.getElementById("nav-mobile-menu-button");
+      button.addEventListener("click",addClass)
+
+      function addSlideClass(){
+        print("dddd")
+      }
+
     </script>
   </body>
 </html>
