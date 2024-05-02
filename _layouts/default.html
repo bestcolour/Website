@@ -15,7 +15,7 @@
           <div></div>
           <div></div>
         </button>
-        <ul class="nav-mobile-list">
+        <ul id="nav-mobile-list">
           {% for item in site.data.navbar %}
           <li class="{% if page.url == item.link %} nav-active {% endif %}">
             <a href="{{item.link}}"> {{item.title}} </a>
@@ -53,10 +53,10 @@
       ).textContent = `©${year} by ${"{{site.name}}"}`;
 
       var button = document.getElementById("nav-mobile-menu-button");
-      button.addEventListener("click",addClass)
+      button.addEventListener("click",openNavBar)
 
-      function addSlideClass(){
-        print("dddd")
+      function openNavBar(){
+        document.getElementById("nav-mobile-list").style.right = "50%";
       }
 
     </script>

@@ -33,15 +33,15 @@
 }
 
 
-.nav-mobile-list{
+#nav-mobile-list{
   position: fixed;
   right: -50%;
+
+  transition: right 2s;
 }
 
-@keyframes nav-mobile-list {
-  from{right: -50%;}
-  to{right: 50%;}
-}
+
+
 
 
 /* === Desktop === */
